@@ -1,5 +1,18 @@
 .display-posts {
-  border: 1px solid gray;
   display: flex;
   flex-direction: column;
+  width: 230px;
+}
+
+.post-card {
+  padding: 10px;
+
+}
+
+.post-card input:focus textarea:focus {
+  outline: none;
+}
+.post-card input, textarea {
+  outline: none;
+  border: none !important;
 }

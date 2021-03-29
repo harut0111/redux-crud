@@ -20,23 +20,23 @@ const PostText: React.FC = () => {
   return (
     <div className="post-text">
       <form onSubmit={handleOnSubmit}>
-        <label>
-          Post:
-          <input
+        <h3>Post</h3>
+      <input
             type="text"
             name="title"
+            placeholder="Post title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-        </label>
         <textarea
           name="message"
+          placeholder="Post message"
           rows={10}
           cols={10}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Post" />
       </form>
     </div>
   );

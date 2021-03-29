@@ -1,0 +1,11 @@
+.post-card {
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+}
+
+.post-card .post-card-controllers {
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./DisplayPosts.css";
+import "./PostCards.css";
 import { useAppDispatch } from "../../app/hooks";
 import { update } from "./reduxCRUDSlice";
 import { remove, postsType } from "../ReduxCRUD/reduxCRUDSlice";
@@ -12,7 +12,7 @@ const PostCards: React.FC<PropsType> = ({ post }: PropsType) => {
   const dispatch = useAppDispatch();
   const [isEditMode, setEditMode] = React.useState(false);
   const titleRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
-  const messageRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
+  const messageRef = React.useRef() as React.MutableRefObject<HTMLTextAreaElement>;
 
   const handleOnEditClick = () => {
     setEditMode(true);
@@ -38,15 +38,15 @@ const PostCards: React.FC<PropsType> = ({ post }: PropsType) => {
         />
       </div>
       <div className="post-card-message">
-        <input
-          type="text"
-          name="message"
+        <textarea
           defaultValue={post.message}
+          rows={5}
+          cols={24}
           ref={messageRef}
           disabled={!isEditMode}
         />
       </div>
-      <div className="post-card-controller">
+      <div className="post-card-controllers">
         {isEditMode ? (
           <button onClick={() => handleOnOkClick(post.id)}>Ok</button>
         ) : (
