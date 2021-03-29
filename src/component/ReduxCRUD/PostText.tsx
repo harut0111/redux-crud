@@ -21,13 +21,13 @@ const PostText: React.FC = () => {
     <div className="post-text">
       <form onSubmit={handleOnSubmit}>
         <h3>Post</h3>
-      <input
-            type="text"
-            name="title"
-            placeholder="Post title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
+        <input
+          type="text"
+          name="title"
+          placeholder="Post title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
         <textarea
           name="message"
           placeholder="Post message"

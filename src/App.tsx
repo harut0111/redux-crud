@@ -5,7 +5,7 @@ import ReduxCRUD from "./component/ReduxCRUD";
 const App: React.FC = () => {
   return (
     <div className="App">
-        <ReduxCRUD />
+      <ReduxCRUD />
     </div>
   );
 };
