@@ -63,11 +63,12 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{ts,css,md}": "prettier --write"
+    "**/*": "prettier --write --ignore-unknown",
+    "*.{ts,tsx,css,md}": "prettier --write"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "lint-staged"
     }
   }
 }
